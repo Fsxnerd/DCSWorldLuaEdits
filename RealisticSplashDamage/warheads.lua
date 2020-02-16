@@ -19,7 +19,7 @@ local function calcPiercingMass(warhead)
 	end
 end
 
-local explosivePercent = 0.4
+local explosivePercent = 1.0
 
 function simple_aa_warhead(power, caliber) -- By Saint
     local res = {};
@@ -74,7 +74,7 @@ function simple_warhead(power, caliber)
     local res = {};
 
 	res.caliber = caliber
-    res.expl_mass = power*explosivePercent; --new explosion damage effect (explosive + fragments)
+    res.expl_mass = power*explosivePercent*0.4; --new explosion damage effect (explosive + fragments)
 	res.mass = res.expl_mass;
     res.other_factors = {1, 1, 1};
     res.obj_factors = {1, 1};
@@ -408,7 +408,7 @@ warheads["OFAB_50UD"] = simple_warhead(40.0, 100.0);
 
 warheads["M_117"] = simple_warhead(350.0); -- Explosive 175 kg + fragments bonus
 warheads["Mk_81"] = simple_warhead(90.0); -- Explosive 45 kg + fragments bonus
-warheads["Mk_82"] = simple_warhead(180.0); -- Explosive 89 kg + fragments bonus
+warheads["Mk_82"] = simple_warhead(200.0); -- Explosive 89 kg + fragments bonus
 warheads["Mk_83"] = simple_warhead(400.0); -- Explosive 202 kg + fragments bonus
 warheads["Mk_84"] = simple_warhead(850.0); -- Explosive 428 kg + fragments bonus
 warheads["AN_M64"] = simple_warhead(250.0); -- Explosive 121 kg + fragments bonus
