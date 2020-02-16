@@ -2,6 +2,9 @@
 
 ## Realistic Splash Damage Mod
 * Hydra Mk5 Done
+* Mk-82 Done
+* Mk-83 Done
+* Mk-84 Done
 
 ## JF-17 Lua Edits
 * BRM Rockets In Progress
