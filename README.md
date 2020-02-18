@@ -1,6 +1,7 @@
 # DCSWorldLuaEdits
 
 ## Files To Use Based On Which Mod(s) You Want:
+* FOR ALL MODS USE OVGME: https://wiki.hoggitworld.com/view/OVGME - Make sure you don't click the advert at the top that says download. The download is further down the page.
 * Bomb/Rocket Realistic Splash Damage - RealisticDamageMod.zip
 * JF-17 Weaponry Mods - JF_17WeaponsMod.zip
 * Aircraft Cannon Mods - CannonMod.zip
