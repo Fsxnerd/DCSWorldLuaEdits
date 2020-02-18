@@ -109,11 +109,11 @@ function penetrating_warhead(power, caliber)
 	local res = {};
 	
 	res.caliber = caliber;
-	res.expl_mass = power*explosivePercent;
+	res.expl_mass = power*explosivePercent*.4;
 	res.mass = res.expl_mass;
 	res.other_factors = {1, 1, 1};
 	res.obj_factors = {1, 1};
-	res.concrete_factors = {5, 1, 10};
+	res.concrete_factors = {5, 1, 5};
 	res.cumulative_factor = 0.0;
 	res.concrete_obj_factor = 5.0;
 	res.cumulative_thickness = 0.0;
@@ -185,7 +185,7 @@ warheads["C_8"] = -- S-8йнл shaped-charge, fragmented
     other_factors    = { 0.5, 0.5, 0.5 },
     concrete_factors = { 0.5, 0.5, 0.1 },
     concrete_obj_factor = 0.0,
-    obj_factors      = { 0.5, 1.0 },
+    obj_factors      = { 1.0, 1.0 },
     cumulative_factor= 5.0,
     cumulative_thickness = 0.3
 };
@@ -194,11 +194,11 @@ warheads["C_8OFP2"] =  -- S-8OFP HE
 {
 	 mass			= 9.2,
      expl_mass        = 2.7, -- Warhead 9,2 kg, explosive 2.7 kg + fragments bonus
-     other_factors    = { 0.5, 1.0, 1.0 },
+     other_factors    = { 1.0, 1.0, 1.0 },
      concrete_factors = { 0.5, 1.0, 0.1 },
      concrete_obj_factor = 0.3,
-     obj_factors      = { 0.5, 1.0 },
-     cumulative_factor= 0.0,
+     obj_factors      = { 1.0, 1.0 },
+     cumulative_factor= 2.0,
      cumulative_thickness = 0.0
 };
 
@@ -214,11 +214,11 @@ warheads["C_8CM"] = -- S-8TsM target-marking rocket
 warheads["C_13"] = -- S-13нт HE
 {
 	mass			= 33.0,
-    expl_mass        = 33.0, -- Warhead 33 kg, explosive 7 kg + fragments bonus
+    expl_mass        = 7.0, -- Warhead 33 kg, explosive 7 kg + fragments bonus
     other_factors    = { 1.0, 1.0, 1.0 },
     concrete_factors = { 1.0, 2.0, 0.5 },
     concrete_obj_factor = 1.0;
-    obj_factors      = { 0.2, 2.0 },
+    obj_factors      = { 1.0, 2.0 },
     cumulative_factor= 0.0,
     cumulative_thickness = 0.0
 }; 
@@ -227,18 +227,18 @@ warheads["C_13"] = -- S-13нт HE
 warheads["C_24"] = -- S-24 HE Warhead 123 kg, explosive 23.5 kg + fragments bonus
 {
 	 mass			= 123.0,
-     expl_mass        = 123.0, -- Warhead 123 kg, explosive 23.5 kg + fragments bonus
+     expl_mass        = 23.5.0, -- Warhead 123 kg, explosive 23.5 kg + fragments bonus
      other_factors    = { 1.0, 1.0, 1.0 },
      concrete_factors = { 1.0, 1.0, 0.1 },
      concrete_obj_factor = 1.0,
-     obj_factors      = { 0.2, 1.0 },
+     obj_factors      = { 1.0, 1.0 },
      cumulative_factor= 0.0,
      cumulative_thickness = 0.0
 };
 
 warheads["C_25"] = -- S-25OFM HE Penetrator
 {
-	 mass			= 155.0,
+	 mass			= 190.0,
      expl_mass        = 155.0, 
      other_factors    = { 0.5, 0.5, 0.5 },
      concrete_factors = { 1.0, 1.0, 1.0 },
@@ -257,7 +257,7 @@ warheads["GRAD_9M22U"] = -- 9M22U HE
      other_factors    = { 1.0, 1.0, 1.0 },
      concrete_factors = { 1.0, 1.0, 0.1 },
      concrete_obj_factor = 0.0,
-     obj_factors      = { 0.3, 1.0 },
+     obj_factors      = { 0.5, 1.0 },
      cumulative_factor= 0.0,
      cumulative_thickness = 0.0
 };
@@ -269,7 +269,7 @@ warheads["URAGAN_9M27F"] = -- 9M27F HE
      other_factors    = { 1.0, 1.0, 1.0 },
      concrete_factors = { 1.0, 1.0, 0.1 },
      concrete_obj_factor = 0.0,
-     obj_factors      = { 0.3, 1.0 },
+     obj_factors      = { 1.0, 1.0 },
      cumulative_factor= 0.0,
      cumulative_thickness = 0.0
 };
@@ -289,24 +289,24 @@ warheads["SMERCH_9M55F"] = -- 9M55F HE Smerch
 warheads["HYDRA_70"] = -- HYDRA-70 HE
 {
 	 mass			  = 4.2,
-     expl_mass        = 4.2, -- Warhead 4.2 kg, explosive 1.04 kg + fragments bonus
+     expl_mass        = 1.04, -- Warhead 4.2 kg, explosive 1.04 kg + fragments bonus
      other_factors    = { 1.0, 1.0, 1.0 },
      concrete_factors = { 1.0, 1.0, 0.1 },
      concrete_obj_factor = 0.0,
-     obj_factors      = { 0.25, 1.0 },
-     cumulative_factor= 0.0,
+     obj_factors      = { 1.0, 1.0 },
+     cumulative_factor= 2.0,
      cumulative_thickness = 0.0
 };
 
 warheads["HYDRA_70_MK1"] = -- HYDRA-70 Mk1 HE
 {
-	 mass			 		= 2.94835,
-     expl_mass        		= 2.94835, -- Warhead 6.5 lbs, explosive 0.428 kg + fragments bonus
+	 mass			 		= 3.94835,
+     expl_mass        		= 3.94835, -- Warhead 6.5 lbs, explosive 0.428 kg + fragments bonus
      other_factors    		= { 1.0, 1.0, 1.0 },
      concrete_factors 		= { 1.0, 1.0, 0.1 },
      concrete_obj_factor 	= 0.0,
-     obj_factors      	 	= { 0.25, 1.0 },
-     cumulative_factor		= 0.0,
+     obj_factors      	 	= { 1.0, 1.0 },
+     cumulative_factor		= 2.0,
      cumulative_thickness   = 0.0
 };
 
@@ -749,7 +749,7 @@ warheads["TGM_65H"] = simple_warhead(0, 0.305);
 ------------------------------------------------------
 warheads["Vikhr_M"] = 
 {
-	mass 			= 8,
+	mass 			= 10,
 	caliber			= 130,
     expl_mass        = 4.0, -- Warhead 8 kg, explosive 4 kg + fragments bonus
     other_factors    = { 1.0, 1.0, 1.0 },
@@ -762,7 +762,7 @@ warheads["Vikhr_M"] =
 
 warheads["Vikhr"] = 
 {
-	mass 			= 8,
+	mass 			= 10,
 	caliber			= 130,
     expl_mass        = 4.0, -- Warhead 8 kg, explosive 4 kg + fragments bonus
     other_factors    = { 1.0, 1.0, 1.0 },

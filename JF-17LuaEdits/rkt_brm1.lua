@@ -1,15 +1,15 @@
 local brm1_90_warhead =
 {
-    mass                 = 1000, 
+    mass                 = 30, 
     caliber              = 90,
-    expl_mass            = 100,
-    piercing_mass        = 100,					
-    other_factors        = { 0.5, 0.5, 0.5 },	
+    expl_mass            = 10,
+    piercing_mass        = 30,					
+    other_factors        = { 1.0, 0.5, 0.5 },	
     concrete_factors     = { 1.0, 1.0, 1.0 },
     concrete_obj_factor  = 2.0,
     obj_factors          = { 1.0, 1.0 },
-    cumulative_factor    = 1.5,
-    cumulative_thickness = 0.25, 
+    cumulative_factor    = 2.0,
+    cumulative_thickness = 0.0, 
 }
 
 local brm1_name = 'BRM-1 90MM'
