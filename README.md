@@ -17,4 +17,4 @@
 * SD-10 Amraams In Progress
 * LD-10 HARMs In Progress
 * Glide Bombs In Progress
-* 701-IR And 701-TV Finished
+* 701-IR And 701-TV In Progress
