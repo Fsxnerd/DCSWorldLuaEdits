@@ -24,3 +24,9 @@
 * LD-10 HARMs In Progress
 * Glide Bombs In Progress
 * 701-IR And 701-TV Finished
+
+## Files To Use Based On Which Mod(s) You Want:
+* Bomb/Rocket Realistic Splash Damage - RealisticDamageMod.zip
+* JF-17 Weaponry Mods - JF_17WeaponsMod.zip
+* Aircraft Cannon Mods - CannonMod.zip
+
